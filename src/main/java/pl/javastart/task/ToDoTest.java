@@ -7,6 +7,7 @@ public class ToDoTest {
         Person person2 = new Person("Barbara", "Malina");
         Person person3 = new Person("Anna", "Porządna");
 
+
         Task task1 = new Task("Pranie", "Koszule męskie", 1,
                 person1);
         Task task2 = new Task("Mycie", "Okna i podłogi", -1,
@@ -22,4 +23,6 @@ public class ToDoTest {
         boolean lowPriority = task2.lowPriority();
         System.out.println(lowPriority);
     }
+    
 }
+
