@@ -7,27 +7,19 @@ public class ToDoTest {
         Person person2 = new Person("Barbara", "Malina");
         Person person3 = new Person("Anna", "Porządna");
 
-        Task task1 = new Task("Pranie", "Koszule męskie", true,
+        Task task1 = new Task("Pranie", "Koszule męskie", 1,
                 person1);
-        Task task2 = new Task("Mycie", "Okna i podłogi", true,
+        Task task2 = new Task("Mycie", "Okna i podłogi", -1,
                 person2);
-        Task task3 = new Task("Prasowanie", "Koszule męskie", true,
-                person3);
 
 
-        ToDoTask tasker = new ToDoTask();
-        boolean highPriority = tasker.getHighPriority(task1);
+        boolean highPriority = task1.highPriority();
         System.out.println(highPriority);
 
-        boolean mediumPriority = tasker.getMediumPriority(task2);
+        boolean mediumPriority = task1.mediumPriority();
         System.out.println(mediumPriority);
 
-        boolean lowPriority = tasker.getLowPriority(task3);
+        boolean lowPriority = task2.lowPriority();
         System.out.println(lowPriority);
     }
 }
-//Nie mogę sobie poradzić z końcową cześcią zadania:
-//Zadanie ma priorytet wysoki, jeśli do pola priorytet przypisana jest wartość dodatnia,
-// normalny oznacza wartość 0,a niski wartość ujemną.
-// Utwórz kilka przykładowych obiektów reprezentujących zadania i przetestuj stworzone
-// metody wyświetlając wartości ich priorytetów.
